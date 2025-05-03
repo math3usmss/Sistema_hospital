@@ -1,7 +1,7 @@
 ## Sistema de sistema de agendamento de consulta
 
 ### Sobre o projeto
-- Sistema de criação de agendamento de consulta de hospital.
+- Sistema de agendamento de consulta para hospital.
 - Aplicativo feito para uso no console do java.
   
 - A aplicação possui as funcionalidades de:
