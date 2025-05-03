@@ -1,5 +1,7 @@
 package models;
 
+import java.util.Objects;
+
 public class Paciente extends Pessoa{
 
     private Integer idade;
@@ -21,4 +23,20 @@ public class Paciente extends Pessoa{
         return planoDeSaude;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Paciente paciente)) return false;
+        if (!super.equals(o)) return false;
+        return Objects.equals(planoDeSaude, paciente.planoDeSaude);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), planoDeSaude);
+    }
+
+    @Override
+    public String toString() {
+        return this.getNome() + " " + this.getPlanoDeSaude() + " " + this.getCPF() + " " + this.getCPF();
+    }
 }

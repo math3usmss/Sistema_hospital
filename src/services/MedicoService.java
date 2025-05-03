@@ -12,6 +12,7 @@ public class MedicoService {
        try{
            Medico medico = new Medico(nome, CPF, CRM, especialidade);
            medicos.add(medico);
+           System.out.println("Médico cadastrado com sucesso!");
        }
        catch (RuntimeException e){
            System.out.println("Erro ao cadastrar um médico" + e.getMessage());
@@ -25,5 +26,14 @@ public class MedicoService {
             }
         }
         return null;
+    }
+
+    public void ListarMedicos(){
+        if(!medicos.isEmpty()){
+            for(Medico medico : medicos){
+                System.out.println(medico);
+            }
+        }
+        else {System.out.println("Sem médicos cadastrados!");}
     }
 }

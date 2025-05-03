@@ -34,4 +34,9 @@ public class Medico extends Pessoa{
     public int hashCode() {
         return Objects.hash(CRM, especialidade);
     }
+
+    @Override
+    public String toString() {
+        return this.getNome() + ", " + this.getCRM() + ", " + this.getEspecialidade() + ", " + this.getCPF();
+    }
 }
